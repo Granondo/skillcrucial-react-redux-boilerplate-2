@@ -1,16 +1,19 @@
 import React from 'react'
-import Head from './head'
+import {Route, Switch} from 'react-router-dom'
+
+import Main from './main'
+import List from './list'
+import TextFromFile from './text-from-file'
 
 const Dummy = () => {
   return (
     <div>
-      <Head title="Hello" />
-      <div className="flex items-center justify-center h-screen">
-        <div className="bg-indigo-800 hover:text-red-500 text-white font-bold rounded-lg border shadow-lg p-10">
-          This is dummy component
+          <Switch>
+            <Route exact path='/' component={() => <Main />} />
+            <Route exact path='/:userName' component={() => <List />} />
+            <Route exact path='/:userName/:repositoryName' component={() => <TextFromFile />} />
+          </Switch>
         </div>
-      </div>
-    </div>
   )
 }
 

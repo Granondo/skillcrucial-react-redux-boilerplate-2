@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Head from './head'
+import Header from './header'
 // import wave from '../assets/images/wave.jpg'
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
 
   return (
     <div>
+    <Header />
       <Head title="Hello" />
       <img alt="wave" src="images/wave.jpg" />
       <button type="button" onClick={() => setCounterNew(counter + 1)}>
