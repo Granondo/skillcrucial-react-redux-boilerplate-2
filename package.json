@@ -4,6 +4,7 @@
     "description": "Boilerplate SkillCrucial",
     "main": "index.js",
     "scripts": {
+        "debug": "nodemon --inspect start.js",
         "docker-start-dev": "docker-compose -f \"docker\\DEV.docker-compose.yml\" up",
         "docker-stop-dev": "docker-compose -f \"docker\\DEV.docker-compose.yml\" down",
         "dev": "yarn run watch:server & yarn run watch:client ",
